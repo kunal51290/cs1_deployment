@@ -392,6 +392,4 @@ def pred(x):
 	else:
 		rf_ps = 'non functional'
 	st.write("Pump status predicted by ML model :",rf_ps)
-
-
-st.button("CLICK HERE",on_click=pred(x_enc))
+pred(x_enc)
