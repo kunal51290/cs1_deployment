@@ -380,7 +380,7 @@ from scipy.sparse import hstack
 x_enc = hstack((x_funder,x_installer,x_basin,x_subvillage,x_scheme_name,x_extraction_type,x_management,x_payment,x_water_quality,x_source,x_source_class,x_waterpoint_type,num_feat)).tocsr()
 
 st.header("Predicting the status of water pump")
-st.write("After selection of pump related data click the button below to predict the status of pump")
+st.write("After selection of pump related data in side bar the predicted status of pump will be displayed below")
 
 def pred(x):
 	rf_model = load("RF_model.joblib")
