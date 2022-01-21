@@ -11,6 +11,10 @@ df = {}
 
 st.sidebar.title("Required information related to water pump")
 
+df['latitude'] = st.sidebar.slider("Latitude of water pump location",-11.64944018,-2e-08)
+
+df['longitude'] = st.sidebar.slider("Longitude of water pump location",0.0,40.34519307)
+
 df["quantity"] = st.sidebar.selectbox("Quantity of water",['unknown','dry','insufficient','seasonal','enough'])
 
 df["permit"] = st.sidebar.selectbox("Permit for well available or not",[True,False])
@@ -309,10 +313,6 @@ df['amount_tsh'] = st.sidebar.slider("Total static head of water",0,35000)
 df['gps_height'] = st.sidebar.slider("GPS height of water pump location",-90,2770)
 
 df['region_code'] = st.sidebar.slider("Region code of water pump location",1,99)
-
-df['latitude'] = st.sidebar.slider("Latitude of water pump location",-11.64944018,-2e-08)
-
-df['longitude'] = st.sidebar.slider("Longitude of water pump location",0.0,40.34519307)
 
 df['population'] = st.sidebar.slider("Population of water pump location",0,30500)
 
