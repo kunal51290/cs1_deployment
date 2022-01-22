@@ -98,7 +98,6 @@ nest-asyncio==1.4.3
 nose==1.3.7
 notebook==6.1.5
 numba==0.51.2
-numexpr==2.7.1
 numpy
 oauthlib==3.1.1
 olefile==0.46
