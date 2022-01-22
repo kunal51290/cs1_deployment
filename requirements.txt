@@ -27,7 +27,6 @@ clyent==1.2.1
 comtypes==1.1.7
 conda==3.5.0
 conda-build==2.1.5
-conda-verify==3.4.2
 cycler==0.10.0
 cytoolz==0.11.0
 decorator==4.4.2
