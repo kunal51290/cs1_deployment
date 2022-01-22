@@ -2,6 +2,8 @@ import sklearn
 import numpy as np
 import pandas as pd
 import streamlit as st
+import joblib
+from joblib import load
 
 st.title("WATER PUMP STATUS PREDICTION USING ML MODEL TRAINED ON TAARIFA DATASET")
 
@@ -333,8 +335,6 @@ df["location"] = np.sqrt(df["latitude"]**2+df["longitude"]**2)
 
 df["age_in_years"] = df["date_recorded"].year - df["construction_year"]
 
-from joblib import load
-
 def col_std(feature):
 	std = load("std_"+feature+".joblib")
 	data[feature] = std.transform(np.array(df[feature]).reshape(-1,1))[0][0]
@@ -392,4 +392,5 @@ def pred(x):
 	else:
 		rf_ps = 'non functional'
 	st.write("Pump status predicted by ML model :",rf_ps)
+
 pred(x_enc)
